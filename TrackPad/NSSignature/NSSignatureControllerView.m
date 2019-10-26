@@ -66,6 +66,7 @@
 
 -(IBAction)done_button_action:(id)sender{
     [manager removeListener:listener];
+    begin_button.alphaValue = 0.f;
     png_image_data = [sign_view get_data];
     [self.window.sheetParent endSheet:self.window returnCode:NSModalResponseOK];
 }
