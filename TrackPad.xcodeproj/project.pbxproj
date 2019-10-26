@@ -12,11 +12,11 @@
 		EE53F8F0236405AD00822A85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE53F8EF236405AD00822A85 /* Assets.xcassets */; };
 		EE53F8F3236405AD00822A85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE53F8F1236405AD00822A85 /* Main.storyboard */; };
 		EE53F8F6236405AD00822A85 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53F8F5236405AD00822A85 /* main.m */; };
-		EE53F912236405BB00822A85 /* NSSignatureWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE53F8FE236405BA00822A85 /* NSSignatureWindow.xib */; };
-		EE53F913236405BB00822A85 /* NSSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53F900236405BA00822A85 /* NSSignatureView.m */; };
-		EE53F918236405BB00822A85 /* NSSignatureControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53F911236405BB00822A85 /* NSSignatureControlView.m */; };
 		EE53F93323642C2700822A85 /* OpenMultitouchSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE53F93123642BF600822A85 /* OpenMultitouchSupport.framework */; };
 		EE53F93423642C2700822A85 /* OpenMultitouchSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EE53F93123642BF600822A85 /* OpenMultitouchSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		EE53F938236449C800822A85 /* NSSignatureControllerView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53F937236449C800822A85 /* NSSignatureControllerView.m */; };
+		EE53F93B236449DB00822A85 /* NSSignatureView.m in Sources */ = {isa = PBXBuildFile; fileRef = EE53F93A236449DB00822A85 /* NSSignatureView.m */; };
+		EE53F93D236449F000822A85 /* NSSignatureWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE53F93C236449F000822A85 /* NSSignatureWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -43,13 +43,13 @@
 		EE53F8F2236405AD00822A85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE53F8F4236405AD00822A85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE53F8F5236405AD00822A85 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EE53F8FE236405BA00822A85 /* NSSignatureWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NSSignatureWindow.xib; sourceTree = "<group>"; };
-		EE53F8FF236405BA00822A85 /* NSSignatureControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSignatureControlView.h; sourceTree = "<group>"; };
-		EE53F900236405BA00822A85 /* NSSignatureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSignatureView.m; sourceTree = "<group>"; };
-		EE53F910236405BB00822A85 /* NSSignatureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSSignatureView.h; sourceTree = "<group>"; };
-		EE53F911236405BB00822A85 /* NSSignatureControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSSignatureControlView.m; sourceTree = "<group>"; };
 		EE53F93023642B4F00822A85 /* TrackPad.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = TrackPad.entitlements; sourceTree = "<group>"; };
 		EE53F93123642BF600822A85 /* OpenMultitouchSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenMultitouchSupport.framework; path = TrackPad/OpenMultitouchSupport.framework; sourceTree = "<group>"; };
+		EE53F936236449C800822A85 /* NSSignatureControllerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSSignatureControllerView.h; sourceTree = "<group>"; };
+		EE53F937236449C800822A85 /* NSSignatureControllerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSSignatureControllerView.m; sourceTree = "<group>"; };
+		EE53F939236449DB00822A85 /* NSSignatureView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSSignatureView.h; sourceTree = "<group>"; };
+		EE53F93A236449DB00822A85 /* NSSignatureView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSSignatureView.m; sourceTree = "<group>"; };
+		EE53F93C236449F000822A85 /* NSSignatureWindow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NSSignatureWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,7 +84,7 @@
 		EE53F8E8236405AC00822A85 /* TrackPad */ = {
 			isa = PBXGroup;
 			children = (
-				EE53F8FD236405BA00822A85 /* NSSignature */,
+				EE53F935236449AA00822A85 /* NSSignature */,
 				EE53F8E9236405AC00822A85 /* AppDelegate.h */,
 				EE53F8EA236405AC00822A85 /* AppDelegate.m */,
 				EE53F8EC236405AC00822A85 /* ViewController.h */,
@@ -98,25 +98,24 @@
 			path = TrackPad;
 			sourceTree = "<group>";
 		};
-		EE53F8FD236405BA00822A85 /* NSSignature */ = {
-			isa = PBXGroup;
-			children = (
-				EE53F8FF236405BA00822A85 /* NSSignatureControlView.h */,
-				EE53F911236405BB00822A85 /* NSSignatureControlView.m */,
-				EE53F910236405BB00822A85 /* NSSignatureView.h */,
-				EE53F900236405BA00822A85 /* NSSignatureView.m */,
-				EE53F8FE236405BA00822A85 /* NSSignatureWindow.xib */,
-			);
-			name = NSSignature;
-			path = ../../OpenMultitouchSupport/aaa/NSSignature;
-			sourceTree = "<group>";
-		};
 		EE53F91E236410DB00822A85 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				EE53F93123642BF600822A85 /* OpenMultitouchSupport.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EE53F935236449AA00822A85 /* NSSignature */ = {
+			isa = PBXGroup;
+			children = (
+				EE53F936236449C800822A85 /* NSSignatureControllerView.h */,
+				EE53F937236449C800822A85 /* NSSignatureControllerView.m */,
+				EE53F939236449DB00822A85 /* NSSignatureView.h */,
+				EE53F93A236449DB00822A85 /* NSSignatureView.m */,
+				EE53F93C236449F000822A85 /* NSSignatureWindow.xib */,
+			);
+			path = NSSignature;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,7 +176,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE53F912236405BB00822A85 /* NSSignatureWindow.xib in Resources */,
+				EE53F93D236449F000822A85 /* NSSignatureWindow.xib in Resources */,
 				EE53F8F0236405AD00822A85 /* Assets.xcassets in Resources */,
 				EE53F8F3236405AD00822A85 /* Main.storyboard in Resources */,
 			);
@@ -190,10 +189,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE53F93B236449DB00822A85 /* NSSignatureView.m in Sources */,
+				EE53F938236449C800822A85 /* NSSignatureControllerView.m in Sources */,
 				EE53F8EE236405AC00822A85 /* ViewController.m in Sources */,
 				EE53F8F6236405AD00822A85 /* main.m in Sources */,
-				EE53F918236405BB00822A85 /* NSSignatureControlView.m in Sources */,
-				EE53F913236405BB00822A85 /* NSSignatureView.m in Sources */,
 				EE53F8EB236405AC00822A85 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

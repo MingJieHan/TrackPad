@@ -7,15 +7,20 @@
 //
 
 #import "ViewController.h"
-
+#import "NSSignatureControllerView.h"
 @implementation ViewController
 
 
 -(IBAction)action:(id)sender{
     NSWindowController *w = [[NSWindowController alloc] initWithWindowNibName:@"NSSignatureWindow"];
     [self.view.window beginSheet:w.window completionHandler:^(NSModalResponse returnCode) {
-        
+        if (NSModalResponseOK == returnCode){
+            NSSignatureControllerView *vv = (NSSignatureControllerView *)w.window.contentView;
+            [vv.png_image_data writeToFile:[NSHomeDirectory() stringByAppendingPathComponent:@"aaa.png"] atomically:YES];
+            return;
+        }
     }];
+    
 }
 
 
