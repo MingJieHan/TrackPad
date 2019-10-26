@@ -38,6 +38,9 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <connections>
+                            <outlet property="nextKeyView" destination="EiT-Mj-1SZ" id="feM-ta-817"/>
+                        </connections>
                     </customView>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DIs-nv-pr8">
                         <rect key="frame" x="8" y="53" width="566" height="16"/>
@@ -81,7 +84,7 @@ Gw
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="done_button_action:" target="EiT-Mj-1SZ" id="o0s-vM-IjU"/>
+                            <action selector="done_button_action:" target="EiT-Mj-1SZ" id="CoB-xv-Wue"/>
                         </connections>
                     </button>
                 </subviews>
@@ -91,6 +94,7 @@ Gw
                     <outlet property="clear_button" destination="fvb-aF-8BG" id="nvS-0k-z5g"/>
                     <outlet property="done_button" destination="IFh-1r-K6K" id="kbB-LU-BFI"/>
                     <outlet property="sign_view" destination="fdk-JE-r13" id="7nY-rR-yuO"/>
+                    <outlet property="tip_label" destination="DIs-nv-pr8" id="ykR-Y2-zos"/>
                 </connections>
             </view>
             <point key="canvasLocation" x="101.5" y="76.5"/>

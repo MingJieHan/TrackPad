@@ -41,15 +41,26 @@
     if (nil == listener){
         listener = [manager addListenerWithTarget:self selector:@selector(touch_received:)];
     }
+    [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskKeyDown handler:^NSEvent * _Nullable(NSEvent * _Nonnull event) {
+        [self->manager removeListener:self->listener];
+        self->listener = nil;
+        self->begin_button.alphaValue = 1.f;
+        self->cancel_button.enabled = YES;
+        self->done_button.enabled = YES;
+        self->clear_button.enabled = YES;
+        self->tip_label.stringValue = @"Sign your name on the trackpad.";
+        return event;
+    }];
     begin_button.alphaValue = 0.f;
     cancel_button.enabled = NO;
-    done_button.enabled = YES;  //TODO
+    done_button.enabled = NO;
     clear_button.enabled = NO;
     tip_label.stringValue = @"Press any key to finished.";
 }
 
 -(IBAction)cancel_button_action:(id)sender{
     [manager removeListener:listener];
+    listener = nil;
     [self.window.sheetParent endSheet:self.window returnCode:NSModalResponseCancel];
 }
 
