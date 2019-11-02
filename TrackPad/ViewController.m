@@ -16,7 +16,7 @@
     [self.view.window beginSheet:w.window completionHandler:^(NSModalResponse returnCode) {
         if (NSModalResponseOK == returnCode){
             NSSignatureControllerView *vv = (NSSignatureControllerView *)w.window.contentView;
-            [vv.png_image_data writeToFile:[NSHomeDirectory() stringByAppendingPathComponent:@"aaa.png"] atomically:YES];
+            [vv.png_image_data writeToFile:[NSHomeDirectory() stringByAppendingPathComponent:@"signature.png"] atomically:YES];
             return;
         }
     }];

@@ -42,8 +42,10 @@
         listener = [manager addListenerWithTarget:self selector:@selector(touch_received:)];
     }
     [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskKeyDown handler:^NSEvent * _Nullable(NSEvent * _Nonnull event) {
-        [self->manager removeListener:self->listener];
-        self->listener = nil;
+        if (self->listener){
+            [self->manager removeListener:self->listener];
+            self->listener = nil;
+        }
         self->begin_button.alphaValue = 1.f;
         self->cancel_button.enabled = YES;
         self->done_button.enabled = YES;
@@ -59,13 +61,11 @@
 }
 
 -(IBAction)cancel_button_action:(id)sender{
-    [manager removeListener:listener];
     listener = nil;
     [self.window.sheetParent endSheet:self.window returnCode:NSModalResponseCancel];
 }
 
 -(IBAction)done_button_action:(id)sender{
-    [manager removeListener:listener];
     begin_button.alphaValue = 0.f;
     png_image_data = [sign_view get_data];
     [self.window.sheetParent endSheet:self.window returnCode:NSModalResponseOK];
